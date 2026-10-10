@@ -3,20 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Los mejores Poemas</title>
+  <title>Los mejores poemas</title>
+
   <style>
-    /* 1. Estos estilos dan color y orden a toda la página. */
     :root {
-      color-scheme: light;
       --tinta: #342b3b;
       --suave: #766b7a;
       --fondo: #f7f1f5;
-      --tarjeta: #fffdfd;
       --acento: #8b4f72;
     }
 
-    /* 2. El asterisco aplica una regla sencilla a todos los elementos. */
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -26,37 +25,70 @@
       line-height: 1.7;
     }
 
-    /* 3. Limita el ancho para que el texto sea cómodo de leer. */
     .contenedor {
       width: min(92%, 850px);
       margin: 0 auto;
     }
 
     header {
-      padding: 54px 0 38px;
+      padding: 36px 0;
       text-align: center;
       background: #ead9e4;
     }
 
-    header p { color: var(--suave); margin: 8px 0 0; }
-    h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.2rem); }
+    .imagen-portada {
+      display: block;
+      width: min(100%, 500px);
+      max-height: 280px;
+      object-fit: cover;
+      margin: 0 auto 24px;
+      border-radius: 14px;
+    }
 
-    main { padding: 34px 0 55px; }
-    .introduccion { text-align: center; margin: 0 auto 28px; max-width: 620px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+    }
 
-    /* 4. Cada poema tiene apariencia de tarjeta. */
+    header p {
+      color: var(--suave);
+      margin: 8px 0 0;
+    }
+
+    main {
+      padding: 34px 0 55px;
+    }
+
+    .introduccion {
+      text-align: center;
+      margin: 0 auto 28px;
+      max-width: 620px;
+    }
+
     .poema {
-      background: var(--tarjeta);
-      border: 1px solid #eadfe7;
+      background: #eef7f0;
+      border: 1px solid #c9e4d0;
       border-radius: 14px;
       padding: 24px;
       margin: 18px 0;
       box-shadow: 0 5px 18px #342b3b0d;
     }
 
-    .poema h2 { margin: 0 0 12px; color: var(--acento); font-size: 1.45rem; }
-    .versos { white-space: pre-line; }
-    .autor { color: var(--suave); font-style: italic; margin: 16px 0 0; }
+    .poema h2 {
+      margin: 0 0 12px;
+      color: var(--acento);
+      font-size: 1.45rem;
+    }
+
+    .versos {
+      white-space: pre-line;
+    }
+
+    .autor {
+      color: var(--suave);
+      font-style: italic;
+      margin: 16px 0 0;
+    }
 
     footer {
       padding: 22px;
@@ -64,83 +96,66 @@
       color: var(--suave);
       border-top: 1px solid #eadfe7;
     }
-    .poema-Mikey{
-      background: #eef7f0;
-      border-color: #c9e4d0;
-    }
-    
   </style>
 </head>
+
 <body>
-  <!-- 5. El encabezado presenta el nombre y la idea del sitio. -->
   <header>
     <div class="contenedor">
+      <!-- La imagen debe llamarse portada-poema.jpg y estar junto a este archivo. -->
+      <img
+        class="imagen-portada"
+        src="portada-poema.jpg"
+        alt="Imagen de portada para la página de poemas"
+      >
+
       <h1>Poemas Espectaculares</h1>
       <p>Un pequeño espacio para leer y compartir palabras.</p>
     </div>
   </header>
 
-  <!-- 6. Aquí va el contenido principal: introducción y poemas. -->
   <main class="contenedor">
     <p class="introduccion">
       Bienvenido. Esta colección es una invitación a hacer una pausa,
-      leer despacio y encontrar belleza en las cosas cotidianas.
+      leer despacio y encontrar belleza en las palabras.
     </p>
 
-    <!-- 7. Para agregar un poema, copia una tarjeta y cambia su texto. -->
     <article class="poema">
-      <h2>La mañana</h2>
-      <div class="versos">La luz despierta en la ventana,
-la calle empieza a respirar;
-un nuevo día abre sus manos,
-y el mundo vuelve a comenzar.</div>
-      <p class="autor">Poema original</p>
-    </article>
-
-    <article class="poema">
-      <h2>Pequeña pausa</h2>
-      <div class="versos">Guardo silencio un momento,
-escucho al viento pasar;
-entre las cosas sencillas
-también se puede soñar.</div>
-      <p class="autor">Poema original</p>
-    </article>
-    
-    <article class="poema poema-Mikey" style="background:#eef7f0; border:1px solid #c9e4d0; border-radius:14px; padding:24px; margin:18px 0;">
       <h2>Universo en tu mirada</h2>
+
       <div class="versos">No hay nada más fascinante
-      que detenerse a observar a la persona correcta.
-      Eres el amor de mi vida
-      y no me canso de repetirlo,
-      porque cada vez que te veo me quedo sin aliento.
-      Tu belleza no tiene comparación en este mundo.
-      Eres como ese atardecer perfecto
-      que no solo ilumina el camino por el que camino,
-      sino que logra pausar el tiempo cuando me miras.
-      Cuando me sostienes la mirada,
-      entiendo que en tus ojos habita un universo entero.
-      Es como si todas las galaxias
-      y cada estrella brillante
-      hubieran coincidido en un solo punto,
-      únicamente para recordarme
-      la inmensa fortuna que tengo de coincidir contigo.
-      Eres mi sol,
-      la paz que calma mis tormentas
-      y mi mayor orgullo.
-      Te amo con esa intensidad
-      que supera los límites de mi propio pecho.
-      Y al final, de eso se trata la vida:
-      de elegir dónde permanecer.
-      Mi único deseo
-      es dedicar cada segundo
-      a demostrarte que eres
-      y siempre serás
-      lo más valioso que habita en mi historia. 🩷</div>
+que detenerse a observar a la persona correcta.
+Eres el amor de mi vida
+y no me canso de repetirlo,
+porque cada vez que te veo me quedo sin aliento.
+Tu belleza no tiene comparación en este mundo.
+Eres como ese atardecer perfecto
+que no solo ilumina el camino por el que camino,
+sino que logra pausar el tiempo cuando me miras.
+Cuando me sostienes la mirada,
+entiendo que en tus ojos habita un universo entero.
+Es como si todas las galaxias
+y cada estrella brillante
+hubieran coincidido en un solo punto,
+únicamente para recordarme
+la inmensa fortuna que tengo de coincidir contigo.
+Eres mi sol,
+la paz que calma mis tormentas
+y mi mayor orgullo.
+Te amo con esa intensidad
+que supera los límites de mi propio pecho.
+Y al final, de eso se trata la vida:
+de elegir dónde permanecer.
+Mi único deseo
+es dedicar cada segundo
+a demostrarte que eres
+y siempre serás
+lo más valioso que habita en mi historia. 🩷</div>
+
       <p class="autor">Mikey</p>
-      </article>
+    </article>
   </main>
 
-  <!-- 8. El pie de página cierra el sitio. -->
   <footer>
     <div class="contenedor">Hecho con calma y poesía.</div>
   </footer>
